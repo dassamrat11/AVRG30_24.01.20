@@ -374,7 +374,7 @@ public class DaoClass implements DaoInterface {
 				pstmt = dbCon.prepareStatement(transact);
 				pstmt.setTimestamp(1, new Timestamp(new java.util.Date().getTime()));
 				if (pstmt.executeUpdate() > 0)
-					{  query = "select * from account where cust_id= " + account_no_to;
+					{  query = "select * from account where account_no= " + account_no_to;
 					
 					pstmt = dbCon.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 
